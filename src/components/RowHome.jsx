@@ -31,7 +31,7 @@ const RowHome = ({ data = [], scrollValue = 0, itemsPerPage = 8 }) => {
 
   const paginatedData = data.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   return (
@@ -168,18 +168,27 @@ const RowHome = ({ data = [], scrollValue = 0, itemsPerPage = 8 }) => {
               >
                 Close
               </button>
-              <h2 className="text-2xl font-semibold mb-4">{selectedProduct.name || selectedProduct.title}</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                {selectedProduct.name || selectedProduct.title}
+              </h2>
               <div className="mt-4">
                 <h3 className="text-lg font-semibold">Specifications:</h3>
-                <p>{selectedProduct.specification || "No specifications available"}</p>
+                <p>
+                  {selectedProduct.specification ||
+                    "No specifications available"}
+                </p>
               </div>
               <div className="mt-2">
                 <h3 className="text-lg font-semibold">Description:</h3>
                 {/* Render the description as paragraphs */}
                 {selectedProduct.description ? (
-                  selectedProduct.description.split("\n").map((paragraph, index) => (
-                    <p key={index} className="mt-2">{paragraph}</p>
-                  ))
+                  selectedProduct.description
+                    .split("\n")
+                    .map((paragraph, index) => (
+                      <p key={index} className="mt-2">
+                        {paragraph}
+                      </p>
+                    ))
                 ) : (
                   <p>No description available</p>
                 )}
@@ -193,4 +202,3 @@ const RowHome = ({ data = [], scrollValue = 0, itemsPerPage = 8 }) => {
 };
 
 export default RowHome;
-

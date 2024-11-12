@@ -25,7 +25,9 @@ const MenuContainer = () => {
 
   useEffect(() => {
     if (categories) {
-      const currentCategory = categories.find((cat) => cat.urlParamName === filter);
+      const currentCategory = categories.find(
+        (cat) => cat.urlParamName === filter,
+      );
       setSubcategories(currentCategory?.subcategories || []);
       setSelectedSubcategory("");
     }
@@ -36,14 +38,14 @@ const MenuContainer = () => {
     ? foodItems.filter(
         (n) =>
           n.category === filter &&
-          (selectedSubcategory ? n.subcategory === selectedSubcategory : true)
+          (selectedSubcategory ? n.subcategory === selectedSubcategory : true),
       )
     : [];
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const paginatedData = filteredData.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   const openModal = (index) => {
@@ -69,14 +71,14 @@ const MenuContainer = () => {
   // Function to go to the next media in the slide
   const nextMedia = () => {
     setSelectedMediaIndex((prevIndex) =>
-      prevIndex < paginatedData.length - 1 ? prevIndex + 1 : 0
+      prevIndex < paginatedData.length - 1 ? prevIndex + 1 : 0,
     );
   };
 
   // Function to go to the previous media in the slide
   const prevMedia = () => {
     setSelectedMediaIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : paginatedData.length - 1
+      prevIndex > 0 ? prevIndex - 1 : paginatedData.length - 1,
     );
   };
 
@@ -105,10 +107,10 @@ const MenuContainer = () => {
         </svg>
       </button>
 
-     {/* Sidebar */}
+      {/* Sidebar */}
       <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0 bg-white`}
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0 bg-white`}
       >
         <div className="px-3 py-28 sm:py-32 overflow-y-auto h-full">
           <ul className="space-y-2 font-medium">
@@ -117,13 +119,15 @@ const MenuContainer = () => {
                 <button
                   onClick={() => {
                     setFilter(category.urlParamName);
-                    setSidebarOpen(false);  // Close sidebar when category is clicked
+                    setSidebarOpen(false); // Close sidebar when category is clicked
                   }}
                   className={`flex items-center p-2 font-semibold ${filter === category.urlParamName ? "text-blue-500" : ""} group`}
                 >
                   <span
                     className={`flex-1 ms-3 whitespace-nowrap relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 ${
-                      filter === category.urlParamName ? "after:w-full" : "after:w-0 group-hover:after:w-full"
+                      filter === category.urlParamName
+                        ? "after:w-full"
+                        : "after:w-0 group-hover:after:w-full"
                     }`}
                   >
                     {category.name}
@@ -136,7 +140,7 @@ const MenuContainer = () => {
       </aside>
       {/* Main Content Area */}
       <div className="flex-1 w-full sm:ml-64 p-2 min-h-screen">
-       {/* Subcategory Selection */}
+        {/* Subcategory Selection */}
         {subcategories.length > 0 && (
           <div className="flex justify-center space-x-2 overflow-x-auto pb-2 whitespace-nowrap">
             <button
@@ -167,7 +171,11 @@ const MenuContainer = () => {
               >
                 {/* Image or Video */}
                 {item.mediaType.includes("video") ? (
-                  <video className="w-full h-auto object-contain" controls muted>
+                  <video
+                    className="w-full h-auto object-contain"
+                    controls
+                    muted
+                  >
                     <source src={item.mediaURL} type={item.mediaType} />
                   </video>
                 ) : (
@@ -180,7 +188,9 @@ const MenuContainer = () => {
                 )}
 
                 {/* Title Text */}
-                <p className="text-center mt-2 text-sm text-black">{item.title}</p>
+                <p className="text-center mt-2 text-sm text-black">
+                  {item.title}
+                </p>
 
                 {/* Description Text Below Title, visible only on hover */}
                 <p className="text-center mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -232,7 +242,10 @@ const MenuContainer = () => {
               <div className="flex justify-center items-center">
                 {selectedMedia.mediaType.includes("video") ? (
                   <video className="w-full h-auto object-contain" controls>
-                    <source src={selectedMedia.mediaURL} type={selectedMedia.mediaType} />
+                    <source
+                      src={selectedMedia.mediaURL}
+                      type={selectedMedia.mediaType}
+                    />
                   </video>
                 ) : (
                   <img

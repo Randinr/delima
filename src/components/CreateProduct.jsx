@@ -1,22 +1,13 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MdCloudUpload, MdDelete } from "react-icons/md";
 import Loader from "./Loader";
-import { deleteObject, getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import {
+  deleteObject,
+  getDownloadURL,
+  ref,
+  uploadBytesResumable,
+} from "firebase/storage";
 import { storage } from "../firebase.config";
 import { saveProductItem } from "../utils/firebaseFunctions";
 
@@ -41,7 +32,8 @@ const CreateProduct = () => {
         uploadTask.on(
           "state_changed",
           (snapshot) => {
-            const uploadProgress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            const uploadProgress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log(`Upload is ${uploadProgress}% done`);
           },
           (error) => {
@@ -51,7 +43,7 @@ const CreateProduct = () => {
           async () => {
             const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
             resolve({ url: downloadURL, type: file.type });
-          }
+          },
         );
       });
     });
@@ -84,7 +76,9 @@ const CreateProduct = () => {
     const deleteRef = ref(storage, url);
     deleteObject(deleteRef)
       .then(() => {
-        setMediaAssets((prevAssets) => prevAssets.filter((asset) => asset.url !== url));
+        setMediaAssets((prevAssets) =>
+          prevAssets.filter((asset) => asset.url !== url),
+        );
         setIsLoading(false);
         setFields(true);
         setMsg("Media deleted successfully 😊");
@@ -108,7 +102,12 @@ const CreateProduct = () => {
   const saveDetails = async () => {
     setIsLoading(true);
     try {
-      if (mediaAssets.length === 0 || !productName || !specification || !description) {
+      if (
+        mediaAssets.length === 0 ||
+        !productName ||
+        !specification ||
+        !description
+      ) {
         setFields(true);
         setMsg("All fields are required");
         setAlertStatus("danger");
@@ -119,7 +118,10 @@ const CreateProduct = () => {
       } else {
         const data = {
           id: `${Date.now()}`,
-          mediaAssets: mediaAssets.map((asset) => ({ url: asset.url, type: asset.type })),
+          mediaAssets: mediaAssets.map((asset) => ({
+            url: asset.url,
+            type: asset.type,
+          })),
           title: productName,
           specification,
           description,
@@ -162,7 +164,9 @@ const CreateProduct = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className={`w-full p-2 rounded-lg text-center text-lg font-semibold ${
-              alertStatus === "danger" ? "bg-red-400 text-red-800" : "bg-emerald-400 text-emerald-800"
+              alertStatus === "danger"
+                ? "bg-red-400 text-red-800"
+                : "bg-emerald-400 text-emerald-800"
             }`}
           >
             {msg}
@@ -200,7 +204,9 @@ const CreateProduct = () => {
               <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
                 <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                   <MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
-                  <p className="text-gray-500 hover:text-gray-700">Click here to upload multiple images</p>
+                  <p className="text-gray-500 hover:text-gray-700">
+                    Click here to upload multiple images
+                  </p>
                 </div>
                 <input
                   type="file"
@@ -256,10 +262,3 @@ const CreateProduct = () => {
 };
 
 export default CreateProduct;
-
-
-
-
-
-
-

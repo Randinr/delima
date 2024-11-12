@@ -234,14 +234,12 @@
 //           <RowHome data={products} itemsPerPage={4} />
 //         </div>
 //       </div>
-      
+
 //     </section>
 //   );
 // };
 
 // export default HomeContainer;
-
-
 
 // import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
@@ -367,7 +365,7 @@
 //         {/* Services Section */}
 //         <div className="grid grid-cols-6 grid-rows-5 gap-10"> {/* Reduced margin-bottom to mb-4 */}
 //           {/* Main Section - spans 2 columns and 2 rows */}
-         
+
 //           {/* Feature Sections  */}
 //           {/* { feature: "Heavy Equipment Cabin Operator", icon: <FaWrench />, description: "" }, */}
 //           {[
@@ -403,7 +401,6 @@
 //           ))}
 //         </div>
 
-
 //         <div className="mt-2">
 //           <motion.div
 //             className="flex items-center gap-2 sm:gap-4 mb-4"
@@ -426,8 +423,6 @@
 
 // export default HomeContainer;
 
-
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getAllProductItems } from "../utils/firebaseFunctions";
@@ -436,7 +431,17 @@ import { motion } from "framer-motion";
 import Blibli from "../img/blibli.png";
 import Blibli1 from "../img/blibli1.png";
 import Blibli2 from "../img/logong.jpeg";
-import { FaCogs, FaTruck, FaTools, FaGem, FaIndustry, FaShippingFast, FaPaintBrush, FaWrench, FaHandshake } from 'react-icons/fa';
+import {
+  FaCogs,
+  FaTruck,
+  FaTools,
+  FaGem,
+  FaIndustry,
+  FaShippingFast,
+  FaPaintBrush,
+  FaWrench,
+  FaHandshake,
+} from "react-icons/fa";
 import { GiBus, GiCarSeat, GiBulldozer } from "react-icons/gi";
 import { TfiPaintBucket } from "react-icons/tfi";
 import { IoCarSportSharp } from "react-icons/io5";
@@ -496,7 +501,8 @@ const HomeContainer = () => {
       {/* Slideshow Container */}
       <div className="relative w-full max-w-10xl h-[292px] mx-auto overflow-hidden rounded-[50px] flex items-center">
         {slides.map((slide, index) => {
-          const offsetIndex = (index - slideIndex + slides.length) % slides.length;
+          const offsetIndex =
+            (index - slideIndex + slides.length) % slides.length;
           return (
             <div
               key={index}
@@ -504,8 +510,8 @@ const HomeContainer = () => {
                 offsetIndex === 0
                   ? "translate-x-0 scale-100 opacity-100 z-10"
                   : offsetIndex === 1
-                  ? "translate-x-full scale-75 opacity-50 z-0"
-                  : "translate-x-[-100%] scale-75 opacity-50 z-0"
+                    ? "translate-x-full scale-75 opacity-50 z-0"
+                    : "translate-x-[-100%] scale-75 opacity-50 z-0"
               }`}
             >
               <img
@@ -520,13 +526,19 @@ const HomeContainer = () => {
         {/* Navigation Buttons */}
         <button
           className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200 z-20"
-          onClick={() => setSlideIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length)}
+          onClick={() =>
+            setSlideIndex(
+              (prevIndex) => (prevIndex - 1 + slides.length) % slides.length,
+            )
+          }
         >
           ❮
         </button>
         <button
           className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200 z-20"
-          onClick={() => setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length)}
+          onClick={() =>
+            setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length)
+          }
         >
           ❯
         </button>
@@ -537,32 +549,48 @@ const HomeContainer = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2 justify-center bg-blue-100 px-4 py-1 rounded-full"
         >
-          <p className="text-base text-blue-500 font-semibold">PT. Delimajaya Karoseseri</p>
+          <p className="text-base text-blue-500 font-semibold">
+            PT. Delimajaya Karoseseri
+          </p>
         </motion.div>
 
         <motion.p
           initial="hidden"
           whileInView="visible"
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor text-center md:text-left"
         >
-          DelimaJaya <span className="text-blue-600 text-4xl md:text-[3rem] lg:text-[5rem]">Group</span>
+          DelimaJaya{" "}
+          <span className="text-blue-600 text-4xl md:text-[3rem] lg:text-[5rem]">
+            Group
+          </span>
         </motion.p>
 
         <motion.p
           initial="hidden"
           whileInView="visible"
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           transition={{ duration: 0.5 }}
           className="text-sm md:text-base text-textColor text-center md:text-left md:w-[80%]"
         >
-          <br />Since 1975 - Best Value For Business! Strategically located at the heart of Bogor City, Delimajaya Group
-          is the quintessential carrosserie industry in Indonesia.
+          <br />
+          Since 1975 - Best Value For Business! Strategically located at the
+          heart of Bogor City, Delimajaya Group is the quintessential
+          carrosserie industry in Indonesia.
         </motion.p>
 
         <Link to="/about">
@@ -571,7 +599,10 @@ const HomeContainer = () => {
             className="bg-gradient-to-br from-blue-400 to-blue-600 w-full md:w-auto px-4 py-2 rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
             initial="hidden"
             whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
             transition={{ duration: 0.5 }}
           >
             Read More..
@@ -579,19 +610,19 @@ const HomeContainer = () => {
         </Link>
 
         <motion.div
-  className="font-semibold text-4xl px-5 mx-auto text-center"
-  initial="hidden"
-  whileInView="visible"
-  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-  transition={{ duration: 0.5 }}
->
-  <h1 className="text-shadow-only">
-    Our Services
-  </h1>
-</motion.div>
+          className="font-semibold text-4xl px-5 mx-auto text-center"
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-shadow-only">Our Services</h1>
+        </motion.div>
 
-
-       {/* Services Section */}
+        {/* Services Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-4">
           {/* Card 1 */}
           <motion.div
@@ -607,9 +638,11 @@ const HomeContainer = () => {
               whileInView={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <FaIndustry  />
+              <FaIndustry />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Carrosserie Industry</h3>
+            <h3 className="text-lg font-semibold text-center">
+              Carrosserie Industry
+            </h3>
           </motion.div>
 
           {/* Card 2 */}
@@ -628,7 +661,9 @@ const HomeContainer = () => {
             >
               <FaTruck />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Metalworks Fabrication</h3> 
+            <h3 className="text-lg font-semibold text-center">
+              Metalworks Fabrication
+            </h3>
           </motion.div>
 
           {/* Card 6 */}
@@ -647,7 +682,9 @@ const HomeContainer = () => {
             >
               <TfiPaintBucket />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Body Repair and Paint</h3> 
+            <h3 className="text-lg font-semibold text-center">
+              Body Repair and Paint
+            </h3>
           </motion.div>
 
           {/* Card 4 */}
@@ -664,9 +701,11 @@ const HomeContainer = () => {
               whileInView={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <GiCarSeat /> 
+              <GiCarSeat />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Seat Manufacturer</h3>
+            <h3 className="text-lg font-semibold text-center">
+              Seat Manufacturer
+            </h3>
           </motion.div>
 
           {/* Card 5 */}
@@ -685,7 +724,9 @@ const HomeContainer = () => {
             >
               <GiBulldozer />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Heavy Equipment Cabin Operator</h3>
+            <h3 className="text-lg font-semibold text-center">
+              Heavy Equipment Cabin Operator
+            </h3>
           </motion.div>
 
           {/* Card 3 */}
@@ -704,9 +745,10 @@ const HomeContainer = () => {
             >
               <GiBus />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Assembly Plant for Truck and Bus</h3>
+            <h3 className="text-lg font-semibold text-center">
+              Assembly Plant for Truck and Bus
+            </h3>
           </motion.div>
-
 
           {/* Card 7 */}
           <motion.div
@@ -722,9 +764,11 @@ const HomeContainer = () => {
               whileInView={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <IoCarSportSharp  /> 
+              <IoCarSportSharp />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">VIP Interior and Special Project</h3>
+            <h3 className="text-lg font-semibold text-center">
+              VIP Interior and Special Project
+            </h3>
           </motion.div>
 
           {/* Card 8 */}
@@ -743,7 +787,9 @@ const HomeContainer = () => {
             >
               <AiFillCar />
             </motion.div>
-            <h3 className="text-lg font-semibold text-center">Armored Vehicles and VIP Cars</h3> 
+            <h3 className="text-lg font-semibold text-center">
+              Armored Vehicles and VIP Cars
+            </h3>
           </motion.div>
         </div>
 
@@ -753,14 +799,21 @@ const HomeContainer = () => {
             className="flex items-center gap-2 sm:gap-4 mb-4"
             initial="hidden"
             whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
             transition={{ duration: 0.5 }}
           >
             <h1 className="p-1 sm:p-2 lg:p-4 text-lg sm:text-xl lg:text-2xl bg-gray-100 font-bold text-black rounded-lg shadow-lg">
               Stories Delima Jaya
             </h1>
           </motion.div>
-          {loading ? <div>Loading...</div> : <RowHome data={products} itemsPerPage={4} />}
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <RowHome data={products} itemsPerPage={4} />
+          )}
         </div>
       </div>
     </section>
@@ -768,5 +821,3 @@ const HomeContainer = () => {
 };
 
 export default HomeContainer;
-
-

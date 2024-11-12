@@ -40,7 +40,9 @@ const Header = () => {
                 <Link
                   to={item.path}
                   className={`text-lg text-textColor duration-100 transition-all ease-in-out cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 ${
-                    location.pathname === item.path ? "after:w-full" : "after:w-0"
+                    location.pathname === item.path
+                      ? "after:w-full"
+                      : "after:w-0"
                   } hover:after:w-full`}
                 >
                   {item.label}
@@ -52,7 +54,9 @@ const Header = () => {
                 <Link
                   to="/dashboard"
                   className={`text-lg text-textColor duration-100 transition-all ease-in-out cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 ${
-                    location.pathname === "/dashboard" ? "after:w-full" : "after:w-0"
+                    location.pathname === "/dashboard"
+                      ? "after:w-full"
+                      : "after:w-0"
                   } hover:after:w-full`}
                 >
                   Dashboard
@@ -67,8 +71,15 @@ const Header = () => {
           <img src={Delima} className="w-14 object-cover" alt="logo" />
           <p className="text-headingColor text-xl font-bold">Delimajaya</p>
         </Link>
-        <div className="md:hidden cursor-pointer text-gray-500" onClick={toggleMenu}>
-          {isMenuOpen ? <FaTimes size={24} className="text-gray-500" /> : <FaBars size={24} className="text-gray-500" />}
+        <div
+          className="md:hidden cursor-pointer text-gray-500"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? (
+            <FaTimes size={24} className="text-gray-500" />
+          ) : (
+            <FaBars size={24} className="text-gray-500" />
+          )}
         </div>
       </div>
       {isMenuOpen && (
@@ -99,7 +110,9 @@ const Header = () => {
             <Link to="/dashboard" onClick={toggleMenu}>
               <li
                 className={`text-base text-black duration-100 transition-all ease-in-out cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 ${
-                  location.pathname === "/dashboard" ? "after:w-full" : "after:w-0"
+                  location.pathname === "/dashboard"
+                    ? "after:w-full"
+                    : "after:w-0"
                 } hover:after:w-full`}
               >
                 Dashboard

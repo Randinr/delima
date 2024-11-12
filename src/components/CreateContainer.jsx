@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { MdCloudUpload, MdDelete } from "react-icons/md";
 import { categories } from "../utils/data";
 import Loader from "./Loader";
-import { deleteObject, getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import {
+  deleteObject,
+  getDownloadURL,
+  ref,
+  uploadBytesResumable,
+} from "firebase/storage";
 import { storage } from "../firebase.config";
 import { saveCategoryProductItem } from "../utils/firebaseFunctions";
 
@@ -18,7 +23,9 @@ const CreateContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [description, setDescription] = useState(""); // State for description
 
-  const selectedCategory = categories.find((cat) => cat.urlParamName === category);
+  const selectedCategory = categories.find(
+    (cat) => cat.urlParamName === category,
+  );
 
   const uploadMedia = (e) => {
     setIsLoading(true);
@@ -29,7 +36,8 @@ const CreateContainer = () => {
     uploadTask.on(
       "state_changed",
       (snapshot) => {
-        const uploadProgress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        const uploadProgress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log(`Upload is ${uploadProgress}% done`);
       },
       (error) => {
@@ -49,28 +57,30 @@ const CreateContainer = () => {
           setAlertStatus("success");
           setTimeout(() => setFields(false), 4000);
         });
-      }
+      },
     );
   };
 
   const deleteMedia = () => {
     setIsLoading(true);
     const deleteRef = ref(storage, mediaAsset);
-    deleteObject(deleteRef).then(() => {
-      setMediaAsset(null);
-      setMediaType(null);
-      setIsLoading(false);
-      setFields(true);
-      setMsg("Media deleted successfully 😊");
-      setAlertStatus("success");
-      setTimeout(() => setFields(false), 4000);
-    }).catch((error) => {
-      console.error("Delete Error:", error);
-      setFields(true);
-      setMsg("Error while deleting media: Try Again 🙇");
-      setAlertStatus("danger");
-      setIsLoading(false);
-    });
+    deleteObject(deleteRef)
+      .then(() => {
+        setMediaAsset(null);
+        setMediaType(null);
+        setIsLoading(false);
+        setFields(true);
+        setMsg("Media deleted successfully 😊");
+        setAlertStatus("success");
+        setTimeout(() => setFields(false), 4000);
+      })
+      .catch((error) => {
+        console.error("Delete Error:", error);
+        setFields(true);
+        setMsg("Error while deleting media: Try Again 🙇");
+        setAlertStatus("danger");
+        setIsLoading(false);
+      });
   };
 
   const saveDetails = async () => {
@@ -129,7 +139,9 @@ const CreateContainer = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className={`w-full p-2 rounded-lg text-center text-lg font-semibold ${
-              alertStatus === "danger" ? "bg-red-400 text-red-800" : "bg-emerald-400 text-emerald-800"
+              alertStatus === "danger"
+                ? "bg-red-400 text-red-800"
+                : "bg-emerald-400 text-emerald-800"
             }`}
           >
             {msg}
@@ -191,7 +203,9 @@ const CreateContainer = () => {
                 <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
                   <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                     <MdCloudUpload className="text-gray-500 text-3xl hover:text-gray-700" />
-                    <p className="text-gray-500 hover:text-gray-700">Click here to upload</p>
+                    <p className="text-gray-500 hover:text-gray-700">
+                      Click here to upload
+                    </p>
                   </div>
                   <input
                     type="file"
@@ -209,7 +223,11 @@ const CreateContainer = () => {
                       Your browser does not support the video tag.
                     </video>
                   ) : (
-                    <img src={mediaAsset} alt="uploaded media" className="w-full h-full object-cover" />
+                    <img
+                      src={mediaAsset}
+                      alt="uploaded media"
+                      className="w-full h-full object-cover"
+                    />
                   )}
                   <button
                     type="button"

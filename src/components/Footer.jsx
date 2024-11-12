@@ -6,7 +6,9 @@ const Footer = () => {
     <footer className="bg-blue-100 text-gray-700 pt-10 pb-6">
       <div className="container mx-auto flex flex-col items-center">
         {/* Header Footer */}
-        <h2 className="text-2xl font-semibold mb-8">Follow Us on Social Media</h2>
+        <h2 className="text-2xl font-semibold mb-8">
+          Follow Us on Social Media
+        </h2>
 
         {/* Social Media Grid */}
         <div className="grid grid-cols-3 gap-8 w-full max-w-4xl">

@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-       'pop-br': '0px 4px 15px rgba(0, 0, 0, 0.1)',
+        "pop-br": "0px 4px 15px rgba(0, 0, 0, 0.1)",
       },
       width: {
         150: "150px",
@@ -49,7 +49,7 @@ module.exports = {
         textColor: "#515151",
         cartNumbg: "#e80013",
         primary: "#f5f3f3",
-        cardOverlay: 'rgba(256,256,256,0.4)',
+        cardOverlay: "rgba(256,256,256,0.4)",
         lighttextGray: "#9ca0ab",
         card: "rgba(256,256,256,0.8)",
         cartBg: "#282a2c",
@@ -57,18 +57,18 @@ module.exports = {
         cartTotal: "#343739",
       },
       animation: {
-        scroll: 'scroll 20s linear infinite', // Adjust duration for speed
+        scroll: "scroll 20s linear infinite", // Adjust duration for speed
       },
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }, // Adjust to half the width of your images
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }, // Adjust to half the width of your images
         },
       },
     },
   },
   plugins: [
-    require('tailwind-scrollbar'),
-    require('@tailwindcss/aspect-ratio'),
+    require("tailwind-scrollbar"),
+    require("@tailwindcss/aspect-ratio"),
   ],
-}
+};

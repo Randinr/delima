@@ -76,8 +76,20 @@ const About = () => {
             Karoseri Delima Jaya - Grup Delimajaya
           </p>
           <p className="text-black text-sm sm:text-lg font-normal px-4 py-2 rounded-lg">
-            Delima Jaya Group is a leading manufacturing company specializing in vehicle bodyworks (karoseri) and engineering, based in Bogor, Indonesia. Established decades ago, we have become a key player in the Indonesian karoseri industry, known for our commitment to quality, innovation, and customer satisfaction. We continually expand to provide the best solutions in vehicle body manufacturing and engineering services. <br /><br />
-            We cater to a wide range of transportation needs, from buses and trucks to specialized vehicles like ambulances and fire trucks. At Delima Jaya, we strive to maintain strong relationships with our clients and business partners while contributing to the development of environmentally friendly technology through innovations in electric vehicles and sustainable materials.
+            Delima Jaya Group is a leading manufacturing company specializing in
+            vehicle bodyworks (karoseri) and engineering, based in Bogor,
+            Indonesia. Established decades ago, we have become a key player in
+            the Indonesian karoseri industry, known for our commitment to
+            quality, innovation, and customer satisfaction. We continually
+            expand to provide the best solutions in vehicle body manufacturing
+            and engineering services. <br />
+            <br />
+            We cater to a wide range of transportation needs, from buses and
+            trucks to specialized vehicles like ambulances and fire trucks. At
+            Delima Jaya, we strive to maintain strong relationships with our
+            clients and business partners while contributing to the development
+            of environmentally friendly technology through innovations in
+            electric vehicles and sustainable materials.
           </p>
         </motion.h1>
 
@@ -95,23 +107,23 @@ const About = () => {
         {[
           {
             year: "1976 - The Founding",
-            text: "Delima Jaya was founded in 1976 by visionary entrepreneurs aiming to provide high-quality transportation solutions in Indonesia. Initially, the company focused on producing basic bodyworks for local trucks and buses."
+            text: "Delima Jaya was founded in 1976 by visionary entrepreneurs aiming to provide high-quality transportation solutions in Indonesia. Initially, the company focused on producing basic bodyworks for local trucks and buses.",
           },
           {
             year: "1980s - Expansion and Innovation",
-            text: "In the 1980s, Delima Jaya experienced significant growth, expanding the types of vehicles produced and upgrading production facilities. The company began receiving orders from both government and private sectors for specialized vehicles such as ambulances and commercial transport vehicles."
+            text: "In the 1980s, Delima Jaya experienced significant growth, expanding the types of vehicles produced and upgrading production facilities. The company began receiving orders from both government and private sectors for specialized vehicles such as ambulances and commercial transport vehicles.",
           },
           {
             year: "1990s - Product Diversification",
-            text: "During the 1990s, Delima Jaya underwent major diversification by entering new sectors such as fire trucks, mobile laboratories, and heavy machinery. The company also formed partnerships with international collaborators to enhance production capacity and technological capabilities."
+            text: "During the 1990s, Delima Jaya underwent major diversification by entering new sectors such as fire trucks, mobile laboratories, and heavy machinery. The company also formed partnerships with international collaborators to enhance production capacity and technological capabilities.",
           },
           {
             year: "2000s - Focus on Environmentally Friendly Technology",
-            text: "Responding to global demands for more sustainable practices, Delima Jaya began developing bodyworks for electric vehicles and incorporating more sustainable materials into its manufacturing processes. During this period, the company also invested in automation technologies to increase production efficiency."
+            text: "Responding to global demands for more sustainable practices, Delima Jaya began developing bodyworks for electric vehicles and incorporating more sustainable materials into its manufacturing processes. During this period, the company also invested in automation technologies to increase production efficiency.",
           },
           {
             year: "2020s - Industry Leadership",
-            text: "Delima Jaya has continued to grow into one of the leaders in the Indonesian karoseri industry. With an expanding market reach, including international projects, the company plays a significant role in large-scale public transportation and specialized vehicle projects. Our commitment to innovation and sustainability remains a central focus."
+            text: "Delima Jaya has continued to grow into one of the leaders in the Indonesian karoseri industry. With an expanding market reach, including international projects, the company plays a significant role in large-scale public transportation and specialized vehicle projects. Our commitment to innovation and sustainability remains a central focus.",
           },
         ].map((history, index) => (
           <motion.div
@@ -157,7 +169,10 @@ const About = () => {
           variants={fadeInUp}
           className="text-black text-sm sm:text-lg font-normal px-4 py-1 rounded-lg"
         >
-          To be the most renowned and reputable vehicle manufacturer, metal fabricator and automotive assembler in Indonesia, with a strong financial foundation and excellent quality products offered at a very competitive price.
+          To be the most renowned and reputable vehicle manufacturer, metal
+          fabricator and automotive assembler in Indonesia, with a strong
+          financial foundation and excellent quality products offered at a very
+          competitive price.
         </motion.p>
         <motion.p
           initial="hidden"
@@ -175,7 +190,8 @@ const About = () => {
           variants={fadeInUp}
           className="text-black text-sm sm:text-lg font-normal px-4 py-2 rounded-lg"
         >
-          To improve product quality continuously and maintain customers' trust by having a solid team work and sustainable management system.
+          To improve product quality continuously and maintain customers' trust
+          by having a solid team work and sustainable management system.
         </motion.p>
 
         {/* Our Values section */}
@@ -196,10 +212,24 @@ const About = () => {
           className="text-black text-sm sm:text-lg font-normal px-4 py-2 rounded-lg"
         >
           <ul className="list-disc list-inside space-y-2 pl-5">
-            <li><span className="font-semibold">Innovation:</span> Continuously pushing the boundaries to deliver creative and efficient bodywork solutions.</li>
-            <li><span className="font-semibold">Quality:</span> Committed to providing products that meet the highest standards of quality.</li>
-            <li><span className="font-semibold">Sustainability:</span> Engaging in technologies and materials that support environmental preservation.</li>
-            <li><span className="font-semibold">Customer Satisfaction:</span> Delivering services that meet and exceed customer expectations.</li>
+            <li>
+              <span className="font-semibold">Innovation:</span> Continuously
+              pushing the boundaries to deliver creative and efficient bodywork
+              solutions.
+            </li>
+            <li>
+              <span className="font-semibold">Quality:</span> Committed to
+              providing products that meet the highest standards of quality.
+            </li>
+            <li>
+              <span className="font-semibold">Sustainability:</span> Engaging in
+              technologies and materials that support environmental
+              preservation.
+            </li>
+            <li>
+              <span className="font-semibold">Customer Satisfaction:</span>{" "}
+              Delivering services that meet and exceed customer expectations.
+            </li>
           </ul>
         </motion.div>
 
@@ -210,7 +240,12 @@ const About = () => {
           variants={fadeInUp}
           className="text-black text-sm sm:text-lg font-normal px-4 py-4 rounded-lg"
         >
-          With over four decades of experience, <span className="font-semibold">Delimajaya</span> is proud to have contributed to the advancement of the automotive and transportation industries in Indonesia. We are committed to continuing our growth alongside our clients and business partners, working towards a brighter and more sustainable future.
+          With over four decades of experience,{" "}
+          <span className="font-semibold">Delimajaya</span> is proud to have
+          contributed to the advancement of the automotive and transportation
+          industries in Indonesia. We are committed to continuing our growth
+          alongside our clients and business partners, working towards a
+          brighter and more sustainable future.
         </motion.p>
 
         {/* Awards and Certificates Section */}
@@ -226,11 +261,33 @@ const About = () => {
 
         <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-5 gap-6 px-4">
           {[
-            { src: SERTI1, alt: "ISO 9001:2015", label: "ISO 9001:2015 - Quality Management System" },
-            { src: SERTI2, alt: "ISO 14001:2015", label: "ISO 14001:2015 - Environmental Management System" },
-            { src: SERTI3, alt: "ISO 45001:2018", label: "ISO 45001:2018 - Occupational Health and Safety Management System" },
-            { src: SERTI4, alt: "IATF 16949:2016", label: "IATF 16949:2016 - Automotive Quality Management System" },
-            { src: SERTI5, alt: "IATF 16949:2016", label: "IATF 16949:2016 - Certificate of Recommendation from PT. Isuzu Astra Motor Indonesia" },
+            {
+              src: SERTI1,
+              alt: "ISO 9001:2015",
+              label: "ISO 9001:2015 - Quality Management System",
+            },
+            {
+              src: SERTI2,
+              alt: "ISO 14001:2015",
+              label: "ISO 14001:2015 - Environmental Management System",
+            },
+            {
+              src: SERTI3,
+              alt: "ISO 45001:2018",
+              label:
+                "ISO 45001:2018 - Occupational Health and Safety Management System",
+            },
+            {
+              src: SERTI4,
+              alt: "IATF 16949:2016",
+              label: "IATF 16949:2016 - Automotive Quality Management System",
+            },
+            {
+              src: SERTI5,
+              alt: "IATF 16949:2016",
+              label:
+                "IATF 16949:2016 - Certificate of Recommendation from PT. Isuzu Astra Motor Indonesia",
+            },
             { src: SERTI6, alt: "IATF 16949:2016", label: "NFPA" },
             { src: SERTI9, alt: "IATF 16949:2016", label: "" },
             { src: SERTI10, alt: "IATF 16949:2016", label: "" },
@@ -238,7 +295,7 @@ const About = () => {
             { src: SERTI12, alt: "IATF 16949:2016", label: "" },
             { src: SERTI13, alt: "IATF 16949:2016", label: "" },
             { src: SERTI7, alt: "IATF 16949:2016", label: "" },
-            { src: SERTI8, alt: "IATF 16949:2016", label: "" }
+            { src: SERTI8, alt: "IATF 16949:2016", label: "" },
           ].map((cert, index) => (
             <motion.div
               className="flex flex-col items-center"
@@ -248,7 +305,11 @@ const About = () => {
               transition={{ duration: 0.5 }}
               variants={fadeInUp}
             >
-              <img src={cert.src} alt={cert.alt} className="w-full h-auto object-cover rounded-lg" />
+              <img
+                src={cert.src}
+                alt={cert.alt}
+                className="w-full h-auto object-cover rounded-lg"
+              />
               <p className="text-center text-xs sm:text-base md:text-lg font-semibold mt-2">
                 {cert.label}
               </p>

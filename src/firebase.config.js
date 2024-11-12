@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "delimajayagrup",
   storageBucket: "delimajayagrup.appspot.com",
   messagingSenderId: "646157367141",
-  appId: "1:646157367141:web:0e96dafefa137b3c4a538c"
+  appId: "1:646157367141:web:0e96dafefa137b3c4a538c",
 };
 
 // Periksa apakah sudah ada app yang diinisialisasi, jika tidak maka inisialisasi baru

@@ -87,8 +87,7 @@ import LogoDelima from "../img/logo delima.png";
 import Blibli from "../img/blibli.png";
 import Blibli1 from "../img/blibli1.png";
 import Blibli2 from "../img/Impact.png";
-import Manhauler from "../img/manhauler.png"
-
+import Manhauler from "../img/manhauler.png";
 
 export const heroData = [
   {
@@ -541,11 +540,7 @@ export const heroData = [
     name: "Manhauler",
     imageSrc: Manhauler,
   },
-  
 ];
-
-
-
 
 export const categories = [
   {
@@ -565,9 +560,7 @@ export const categories = [
     id: 2,
     name: "Cabin Operator",
     urlParamName: "cabin_operator",
-    subcategories: [
-      { id: "2-1", name: "Truk" },
-    ],
+    subcategories: [{ id: "2-1", name: "Truk" }],
   },
   {
     id: 3,
@@ -742,7 +735,8 @@ export const categories = [
     name: "Seat Product",
     urlParamName: "seat_product",
     subcategories: [],
-  },  {
+  },
+  {
     id: 32,
     name: "FAW Truck",
     urlParamName: "faw_truck",

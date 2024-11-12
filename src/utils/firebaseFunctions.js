@@ -1,5 +1,12 @@
 // utils/firebaseFunctions.js
-import { collection, doc, getDocs, orderBy, query, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  setDoc,
+} from "firebase/firestore";
 import { firestore } from "../firebase.config";
 
 // Functions for Food Items
@@ -11,7 +18,7 @@ export const saveCategoryProductItem = async (data) => {
 
 export const getAllCategoryProductItems = async () => {
   const items = await getDocs(
-    query(collection(firestore, "categoryProduct"), orderBy("id", "desc"))
+    query(collection(firestore, "categoryProduct"), orderBy("id", "desc")),
   );
 
   return items.docs.map((doc) => doc.data());
@@ -26,7 +33,7 @@ export const saveProductItem = async (data) => {
 
 export const getAllProductItems = async () => {
   const items = await getDocs(
-    query(collection(firestore, "productItems"), orderBy("id", "desc"))
+    query(collection(firestore, "productItems"), orderBy("id", "desc")),
   );
 
   return items.docs.map((doc) => doc.data());

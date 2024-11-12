@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import l1 from "../img/1.jpg";
 import l2 from "../img/2.jpg";
 import l3 from "../img/3.jpg";
@@ -82,7 +82,7 @@ const Service = () => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         variants={fadeInUp}
-        className='mt-6 p-4 bg-white shadow-lg'
+        className="mt-6 p-4 bg-white shadow-lg"
       >
         {/* Section: PT Delimajaya Carrosserie Industry */}
         <div className="flex items-center gap-2 sm:gap-4 mb-4">
@@ -91,15 +91,45 @@ const Service = () => {
           </h1>
         </div>
         <div className="mb-4">
-          <h2 className="text-sm sm:text-base lg:text-lg font-semibold">Karoseri Kendaraan:</h2>
+          <h2 className="text-sm sm:text-base lg:text-lg font-semibold">
+            Karoseri Kendaraan:
+          </h2>
           <p className="mt-1 text-xs sm:text-sm lg:text-base">
-            Bus, Special Purpose Vehicle, Food Truck, Ambulance, Fire Truck, Dump Truck, Tow Truck, Manhauler, Defense Vehicle, Armored Vehicle, Delivery Truck, Mixer, Arm Roll, etc.
+            Bus, Special Purpose Vehicle, Food Truck, Ambulance, Fire Truck,
+            Dump Truck, Tow Truck, Manhauler, Defense Vehicle, Armored Vehicle,
+            Delivery Truck, Mixer, Arm Roll, etc.
           </p>
-          <p className="mt-2 text-xs sm:text-sm lg:text-base font-medium">Auto Body Manufacturer</p>
+          <p className="mt-2 text-xs sm:text-sm lg:text-base font-medium">
+            Auto Body Manufacturer
+          </p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-8 gap-2 sm:gap-4 lg:gap-8 mt-4">
-          {[l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22, l23].map((imgSrc, index) => (
+          {[
+            l1,
+            l2,
+            l3,
+            l4,
+            l5,
+            l6,
+            l7,
+            l8,
+            l9,
+            l10,
+            l11,
+            l12,
+            l13,
+            l14,
+            l15,
+            l16,
+            l17,
+            l18,
+            l19,
+            l20,
+            l21,
+            l22,
+            l23,
+          ].map((imgSrc, index) => (
             <motion.img
               key={index}
               src={imgSrc}
@@ -119,7 +149,7 @@ const Service = () => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         variants={fadeInUp}
-        className='mt-3 p-4 bg-white shadow-lg'
+        className="mt-3 p-4 bg-white shadow-lg"
       >
         {/* Section: PT Bahtera Putera Abadi */}
         <div className="flex items-center gap-2 sm:gap-4 mt-10 mb-4">
@@ -128,17 +158,48 @@ const Service = () => {
           </h1>
         </div>
         <div className="mb-4">
-          <h2 className="text-sm sm:text-base lg:text-lg font-semibold">Metal Works Fabrication:</h2>
+          <h2 className="text-sm sm:text-base lg:text-lg font-semibold">
+            Metal Works Fabrication:
+          </h2>
           <p className="mt-1 text-xs sm:text-sm lg:text-base">
-            Operator Cabin, Safety Guard, Cover, Railing, Grapple, Bucket, Guide Track, etc.
+            Operator Cabin, Safety Guard, Cover, Railing, Grapple, Bucket, Guide
+            Track, etc.
           </p>
           <p className="mt-2 text-xs sm:text-sm lg:text-base font-medium">
-            Engineering Project: Steel Structure | Seat Manufacturer: Bus, Train, Ship
+            Engineering Project: Steel Structure | Seat Manufacturer: Bus,
+            Train, Ship
           </p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-8 gap-2 sm:gap-4 lg:gap-8 mt-4">
-          {[l24, l25, l26, l27, l28, l29, l30, l31, l32, l33, l34, l35, l36, l37, l38, l39, l40, l41, l42, l43, l44, l45, l65, l66, l67, l68].map((imgSrc, index) => (
+          {[
+            l24,
+            l25,
+            l26,
+            l27,
+            l28,
+            l29,
+            l30,
+            l31,
+            l32,
+            l33,
+            l34,
+            l35,
+            l36,
+            l37,
+            l38,
+            l39,
+            l40,
+            l41,
+            l42,
+            l43,
+            l44,
+            l45,
+            l65,
+            l66,
+            l67,
+            l68,
+          ].map((imgSrc, index) => (
             <motion.img
               key={index}
               src={imgSrc}
@@ -158,7 +219,7 @@ const Service = () => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         variants={fadeInUp}
-        className='mt-3 p-4 bg-white shadow-lg'
+        className="mt-3 p-4 bg-white shadow-lg"
       >
         {/* Section: PT Auto Assembler Indonesia */}
         <div className="flex items-center gap-2 sm:gap-4 mt-10 mb-4">
@@ -172,12 +233,34 @@ const Service = () => {
             Assembly Plant for Automotive in CKD, DKD, IKD, and SKD format:
           </h2>
           <p className="mt-1 text-xs sm:text-sm lg:text-base font-medium">
-            Truck, Bus, and Passenger Cars Process: Body Welding (Spot Welding), Automatic Jig, Engine Assembly, Painting, Trimming, Chassis, Final (TCF), Testing and Finishing Armored Cars: SUV and Sedan
+            Truck, Bus, and Passenger Cars Process: Body Welding (Spot Welding),
+            Automatic Jig, Engine Assembly, Painting, Trimming, Chassis, Final
+            (TCF), Testing and Finishing Armored Cars: SUV and Sedan
           </p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-8 gap-2 sm:gap-4 lg:gap-8 mt-4">
-          {[l46, l47, l48, l49, l50, l51, l52, l53, l54, l55, l56, l57, l58, l59, l60, l61, l62, l63, l64].map((imgSrc, index) => (
+          {[
+            l46,
+            l47,
+            l48,
+            l49,
+            l50,
+            l51,
+            l52,
+            l53,
+            l54,
+            l55,
+            l56,
+            l57,
+            l58,
+            l59,
+            l60,
+            l61,
+            l62,
+            l63,
+            l64,
+          ].map((imgSrc, index) => (
             <motion.img
               key={index}
               src={imgSrc}

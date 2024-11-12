@@ -4,7 +4,6 @@ import HomeContainer from "./HomeContainer";
 const MainContainer = () => {
   const [scrollValue, setScrollValue] = useState(0);
 
-
   useEffect(() => {}, [scrollValue]);
 
   return (
